@@ -1,4 +1,8 @@
+{% if flag?(:darwin) %}
+@[Link("edit")]
+{% else %}
 @[Link("readline")]
+{% end %}
 {% if flag?(:openbsd) %}
 @[Link("termcap")]
 {% end %}
